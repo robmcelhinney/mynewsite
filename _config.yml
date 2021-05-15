@@ -9,5 +9,5 @@ home        : https://mattw.io/
 github      : https://github.com/mattwright324/
 github_repo : https://github.com/mattwright324/youtube-geofind/
 gh_pages    : https://mattw.io/youtube-geofind/
-url: https://conork360.github.io
-baseurl: /mynewsite
+url         : https://conork360.github.io
+baseurl     : /mynewsite
