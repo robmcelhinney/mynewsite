@@ -1,5 +1,3 @@
 *.sh
-_site/
 .idea/
 .sass-cache/
-Gemfile.lock
