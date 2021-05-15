@@ -1,14 +1,14 @@
-CK360 -New Application to locate Geotagged Videos
+CK360 -New Application to locate Geotagged Videos Hi
 =
 
 Search YouTube for geographically tagged videos by location, topic, or channel. 
-Videos are viewable in a map and exportabled to CSV.YT
+Videos are viewable in a map and exportabled to CSV.
 
 * https://mattw.io/youtube-geofind/location
 
 ![Example](https://i.imgur.com/nZErA91.png)
 
-What's unique about this tool? How can you use it?
+What's unique about this tool? How can you use it? tttt
 
 1. Find cool videos where you live or anywhere in the world!
     - What videos were posted by you in the last week? (find me, past 7 days)
