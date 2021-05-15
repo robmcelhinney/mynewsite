@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Topic Search - Discover Geo-tagged Videos - CK360</title>
+    <title>Channel Search - Discover Geo-tagged Videos - CK360</title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description"
@@ -49,7 +49,7 @@
     <div class="container">
         <a class="navbar-brand" href=".">
             <img src="./img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="icon" />
-            CK360- Find live or recorded YouTube videos from a map
+            CK360 Test Site
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -60,16 +60,16 @@
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <span class="navbar-text" style="color:rgba(153, 144, 144, 0.986)">Search:</span>
+                    <span class="navbar-text" style="color:#fff">Search:</span>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"style="color:#836487" href="."><b>Channel</b></a>
+                    <a class="nav-link" href=".">Channel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"style="color:#509867" href="./topic"><b>Topic</b></a>
+                    <a class="nav-link" href="./topic">Topic</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"style="color:#92793d" href="./location"><b>Location</b></a>
+                    <a class="nav-link" href="./location">Location</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="https://endcity.info/" rel="noopener">
@@ -103,7 +103,7 @@
     <div class="content-section">
     <div class="row section-header">
         <div class="col-auto">
-            <h4>By Topic</h4>
+            <h4>By Channel</h4>
         </div>
     </div>
     <div id="search-form" class="d-flex flex-column">
@@ -114,141 +114,27 @@
         </button>
         <strong>CK360 is part of IGNITE Start Up Incubator program 2021!</strong>
         If you have an interesting Start Up idea you can
-        <a href="https://www.ucc.ie/en/ignite/apply/" target="_blank"> Apply to IGNITE here.</a>
-         If you are a potential investor please get in touch via email @conorkelleher2@gmail.com
+        <a href="https://www.ucc.ie/en/ignite/apply/" target="_blank">Apply to IGNITE here.</a>
+        If you are a potential investor please get in touch via email @conorkelleher2@gmail.com
     </div>
 </div>
 
-        
         <div class="form-group row">
-            <label class="col-2 col-form-label">
-                
-                <b>Keywords</b>
-                
-            </label>
+            <label class="col-2 col-form-label"><b>Channel(s)</b></label>
             <div class="col-10">
-                <input type="text" class="form-control" id="keywords" aria-describedby="help"
-                       placeholder="Search" value="GAA matches" />
-                <small class="form-text text-muted">Keywords as if actually searching YouTube.</small>
+                <input type="text" class="form-control" id="channels" aria-describedby="help"
+                       placeholder="eg. UCFN_dQuFU6tXwVLXppqOwpA"
+                       value="UCL5DoP90k7pkEIJ12lEDFDg"/>
+                <small class="form-text text-muted">Copy and Paste YouTube Channel ID or username
+                    <br>For example: https://www.youtube.com/channel/<span style="color: #06cc41">UCL5DoP90k7pkEIJ12lEDFDg</span><br>
+                    <br>or<br>
+                    <br>For example: https://www.youtube.com/user/<span style="color: #06cc41">vicenews</span><br>
+                    </small>
             </div>
         </div>
-        <div class="form-group row">
-            <label class="col-2 col-form-label">Sort by</label>
-            <div class="col-10">
-                <select id="sortBy" aria-describedby="orderhelp" class="custom-select">
-                    <option value="date" selected>Date</option>
-                    <option value="rating">Rating</option>
-                    <option value="relevance">Relevance</option>
-                    <option value="title">Title</option>
-                    <option value="videoCount">Video Count</option>
-                    <option value="viewCount">View Count</option>
-                </select>
-            </div>
-        </div>
-        <!-- Shared form controls for location and topic search -->
-<div class="form-group row">
-    <label class="col-2 col-form-label">Timeframe</label>
-    <div class="col-10" style="width: 100%">
-        <select id="timeframe" aria-describedby="orderhelp" class="custom-select">
-            <option value="any" selected>Any</option>
-            <option value="hour-1">Past hour</option>
-            <option value="hour-3">Past 3 hours</option>
-            <option value="hour-6">Past 6 hours</option>
-            <option value="hour-12">Past 12 hours</option>
-            <option value="hour-24">Past 24 hours</option>
-            <option value="day-7">Past 7 days</option>
-            <option value="day-30">Past 30 days</option>
-            <option value="day-90">Past 90 days</option>
-            <option value="day-365">Past year</option>
-            <option value="custom">Custom</option>
-        </select>
+        <button type="button" class="btn btn-primary" id="btnSubmit">Check Uploads</button>
     </div>
 </div>
-<div id="customRange" style="display:none;">
-    <div class="form-group row">
-        <label class="col-2 col-form-label"><i>Date From</i></label>
-        <div class="col-10">
-            <input class="form-control" style="max-width: 200px;" id="dateFrom" type="date" value="2005-02-13">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-2 col-form-label"><i>Date To</i></label>
-        <div class="col-10">
-            <input class="form-control" style="max-width: 200px;" id="dateTo" type="date">
-        </div>
-    </div>
-</div>
-
-<div class="form-group row">
-    <label class="col-2 col-form-label"><b>Page limit</b></label>
-    <div class="col-10" style="width: 100%">
-        <select id="pageLimit" aria-describedby="page-msg" class="custom-select">
-            <option value="1">1 page</option>
-            <option value="2">2 pages</option>
-            <option value="3" selected>3 pages</option>
-            <option value="5">5 pages</option>
-            <option value="7">7 pages</option>
-            <option value="15">All pages (up to 15)</option>
-        </select>
-        <small id="page-msg" class="form-text text-muted">
-            * API limits stop returning results around pages 10 to 13.
-            <br>
-            * Pages are set to return maximum of 50 results per page.
-        </small>
-    </div>
-</div>
-
-<button class="btn btn-outline-secondary" id="btnToggleAdvanced">
-    Filter by video type and live only option
-</button>
-<div id="advanced-form" style="display: none">
-    <div class="row">
-        <legend class="col-2 col-form-label">Options</legend>
-
-        <div class="col-sm-10">
-            <div id="live-only" class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="liveOnly">
-                <label class="custom-control-label" for="liveOnly">Live events only</label>
-            </div>
-
-            <div id="creative-commons" class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="creativeCommons">
-                <label class="custom-control-label" for="creativeCommons">Licensed with Creative Commons</label>
-            </div>
-
-            <div id="hd-only" class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="highQuality">
-                <label class="custom-control-label" for="highQuality">High Quality only</label>
-            </div>
-
-            <div id="embedded-only" class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="embeddedOnly">
-                <label class="custom-control-label" for="embeddedOnly">Can be embedded on other sites</label>
-            </div>
-
-            <div id="syndicated-only" class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="syndicatedOnly">
-                <label class="custom-control-label" for="syndicatedOnly">Syndicated (Can be played outside
-                    youtube.com)</label>
-            </div>
-        </div>
-    </div>
-</div>
-
-        <div class="form-group" style="width:100%;">
-            <button type="button" class="btn btn-primary" id="btnSubmit" style="width:100%;">
-                Search
-            </button>
-        </div>
-        <div class="form-group">
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="clearOnSearch">
-                <label class="custom-control-label" for="clearOnSearch">Clear results on every search</label>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
 <br>
 
 <div class="content-section">
@@ -261,17 +147,29 @@
                     disabled>Export CSV (All) <i class="fa fa-download" aria-hidden="true"></i></button>
         </div>
     </div>
-    <div class="table-responsive">
-        <table id="dataTable" class="table table-striped table-bordered" style="width:100%;border:none;" cellspacing="0">
-            <thead style="display:none">
-            <tr>
-                <th>Order</th>
-                <th>Video</th>
-            </tr>
-            </thead>
-            <tbody id="dataBody"></tbody>
-        </table>
+    <div class="card">
+        <ul id="channel-list" class="list-group list-group-flush">
+            <li class="example list-group-item d-flex align-content-center">
+                <span>No channels searched.</span>
+            </li>
+        </ul>
     </div>
+</div>
+<br>
+
+<div class="content-section" id="examples">
+    <div class="row section-header">
+        <div class="col-auto">
+            <h4>Example Channels (Copy and Paste the<span style="color: #06cc41"> ID</span> )</h4>
+        </div>
+    </div>
+    <ol id="example-list">
+        <li><span style="color: #06cc41">UCL5DoP90k7pkEIJ12lEDFDg</span> (Channel Name: CK360)</li>
+        <li><span style="color: #06cc41">UCPur06mx78RtwgHJzxpu2ew</span> (Channel Name: Wind Walk Travel Videos)</li>
+        <li><span style="color: #06cc41">UCFN_dQuFU6tXwVLXppqOwpA</span> (Channel Name: The NYC Walking Show)</li>
+        <li><span style="color: #06cc41">UC9P2k33fN1nIEn18DEULISg</span> (Channel Name: Virtual Bike Ride Ireland)</li>
+        <li><span style="color: #06cc41">vicenews</span> (Channel Name: Vice News)</li>
+    </ol>
 </div>
 <br>
 
@@ -291,3 +189,4 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGWanOEMEgdHqsxNDaa_ZXTZ6hoYQrnAI&callback=onMapInit"></script>
 </body>
 </html>
+    
